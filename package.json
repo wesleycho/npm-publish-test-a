@@ -1,7 +1,10 @@
 {
   "name": "npm-publish-test-wc",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Testing npm releases",
+  "files": [
+    "dist.js"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
