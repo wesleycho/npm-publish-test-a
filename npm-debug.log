@@ -1,0 +1,92 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/wesley/.npm-global/bin/npm', 'publish' ]
+2 info using npm@3.5.0
+3 info using node@v0.10.40
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/wesley/dev/testA',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/wesley/.npm/npm-publish-test/0.0.1/package.tgz not in flight; packing
+10 info lifecycle npm-publish-test@0.0.1~prepublish: npm-publish-test@0.0.1
+11 silly lifecycle npm-publish-test@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/wesley/.npm/npm-publish-test/0.0.1/package.tgz',
+12 verbose tar pack   '/Users/wesley/dev/testA' ]
+13 verbose tarball /Users/wesley/.npm/npm-publish-test/0.0.1/package.tgz
+14 verbose folder /Users/wesley/dev/testA
+15 verbose addLocalTarball adding from inside cache /Users/wesley/.npm/npm-publish-test/0.0.1/package.tgz
+16 silly cache afterAdd npm-publish-test@0.0.1
+17 verbose afterAdd /Users/wesley/.npm/npm-publish-test/0.0.1/package/package.json not in flight; writing
+18 verbose afterAdd /Users/wesley/.npm/npm-publish-test/0.0.1/package/package.json written
+19 silly publish { name: 'npm-publish-test',
+19 silly publish   version: '0.0.1',
+19 silly publish   description: 'Testing npm releases',
+19 silly publish   main: 'index.js',
+19 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+19 silly publish   repository:
+19 silly publish    { type: 'git',
+19 silly publish      url: 'git+https://github.com/wesleycho/npm-publish-test-b.git' },
+19 silly publish   author: '',
+19 silly publish   license: 'MIT',
+19 silly publish   bugs: { url: 'https://github.com/wesleycho/npm-publish-test-b/issues' },
+19 silly publish   homepage: 'https://github.com/wesleycho/npm-publish-test-a#readme',
+19 silly publish   gitHead: '7478030264f209478f6078e41232b39b8ce3f844',
+19 silly publish   readme: 'ERROR: No README data found!',
+19 silly publish   _id: 'npm-publish-test@0.0.1',
+19 silly publish   _shasum: 'df8a9227abe661b54edbbe0b8ad317d666ca4625',
+19 silly publish   _from: '.' }
+20 verbose getPublishConfig undefined
+21 silly mapToRegistry name npm-publish-test
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/npm-publish-test
+25 verbose publish registryBase https://registry.npmjs.org/
+26 silly publish uploading /Users/wesley/.npm/npm-publish-test/0.0.1/package.tgz
+27 verbose request uri https://registry.npmjs.org/npm-publish-test
+28 verbose request sending authorization for write operation
+29 info attempt registry request try #1 at 09:33:35
+30 verbose request using bearer token for auth
+31 verbose request id 28190cc3dd2defc5
+32 http request PUT https://registry.npmjs.org/npm-publish-test
+33 http 403 https://registry.npmjs.org/npm-publish-test
+34 verbose headers { 'content-type': 'application/json',
+34 verbose headers   'cache-control': 'max-age=300',
+34 verbose headers   'content-length': '108',
+34 verbose headers   'accept-ranges': 'bytes',
+34 verbose headers   date: 'Sun, 27 Dec 2015 14:33:36 GMT',
+34 verbose headers   via: '1.1 varnish',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'x-served-by': 'cache-atl6228-ATL',
+34 verbose headers   'x-cache': 'MISS',
+34 verbose headers   'x-cache-hits': '0',
+34 verbose headers   'x-timer': 'S1451226815.750018,VS0,VE408' }
+35 verbose request invalidating /Users/wesley/.npm/registry.npmjs.org/npm-publish-test on PUT
+36 error publish Failed PUT 403
+37 verbose stack Error: You do not have permission to publish 'npm-publish-test'. Are you logged in as the correct user? : npm-publish-test
+37 verbose stack     at makeError (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+37 verbose stack     at CachingRegistryClient.<anonymous> (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+37 verbose stack     at Request._callback (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+37 verbose stack     at Request.self.callback (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/request/request.js:198:22)
+37 verbose stack     at Request.emit (events.js:98:17)
+37 verbose stack     at Request.<anonymous> (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+37 verbose stack     at Request.emit (events.js:117:20)
+37 verbose stack     at IncomingMessage.<anonymous> (/Users/wesley/.npm-global/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose stack     at IncomingMessage.emit (events.js:117:20)
+37 verbose stack     at _stream_readable.js:944:16
+38 verbose statusCode 403
+39 verbose pkgid npm-publish-test
+40 verbose cwd /Users/wesley/dev/testA
+41 error Darwin 15.2.0
+42 error argv "node" "/Users/wesley/.npm-global/bin/npm" "publish"
+43 error node v0.10.40
+44 error npm  v3.5.0
+45 error code E403
+46 error You do not have permission to publish 'npm-publish-test'. Are you logged in as the correct user? : npm-publish-test
+47 error If you need help, you may report this error at:
+47 error     <https://github.com/npm/npm/issues>
+48 verbose exit [ 1, true ]
